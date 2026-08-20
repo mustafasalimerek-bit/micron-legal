@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Micron — Privacy Policy</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--board:#0E1A2B;--deep:#0A1420;--rule:#1D3149;--chalk:#E6EDF5;--slate:#5C7793;--amber:#FFA23A}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--deep);color:var(--chalk);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  line-height:1.85;font-size:14px;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 20px 60px}
+header{display:flex;align-items:baseline;justify-content:space-between;
+  padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:26px}
+.mark{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:19px;
+  letter-spacing:.20em;text-transform:uppercase}
+.mark span{color:var(--amber)}
+.langs{font-size:11px;letter-spacing:.14em}
+.langs a{color:var(--slate);text-decoration:none;margin-left:10px}
+.langs a.on{color:var(--amber)}
+h1{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:22px;letter-spacing:.10em;
+  text-transform:uppercase;margin:0 0 6px}
+.updated{color:var(--slate);font-size:11px;letter-spacing:.10em;margin-bottom:30px}
+h2{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:14px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);margin:32px 0 10px}
+p{margin:0 0 14px;color:#C9D6E5}
+ul{margin:0 0 14px 18px;color:#C9D6E5}
+li{margin-bottom:7px}
+b{color:var(--chalk);font-weight:500}
+a{color:var(--amber)}
+table{width:100%;border-collapse:collapse;margin:0 0 16px;font-size:12.5px}
+th,td{text-align:left;padding:9px 8px;border-bottom:1px solid var(--rule);vertical-align:top}
+th{color:var(--slate);font-weight:400;font-size:11px;letter-spacing:.10em;text-transform:uppercase}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
+  color:var(--slate);font-size:11.5px;line-height:1.9}
+[hidden]{display:none}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="mark">Micr<span>o</span>n</div>
+    <div class="langs">
+      <a href="#" id="l-en" class="on">EN</a>
+      <a href="#" id="l-tr">TR</a>
+    </div>
+  </header>
+
+  <section id="en">
+    <h1>Privacy Policy</h1>
+    <div class="updated">Last updated 5 August 2026</div>
+
+    <p>Micron is a daily puzzle game. This policy describes exactly what it sends,
+    where it goes and why. It is written against the source code, not against an
+    intention — everything listed here can be found in
+    <code>lib/net/board_client.dart</code>.</p>
+
+    <h2>What Micron sends</h2>
+    <p>Micron sends data to one server we operate
+    (<code>micron-board.erekstudio.workers.dev</code>), and only when you finish a
+    round or use a friend group.</p>
+    <table>
+      <tr><th>Data</th><th>Why</th></tr>
+      <tr><td><b>A random install identifier</b> — 18 hex characters generated on your device the first time you finish a round</td><td>So the leaderboard can keep one entry per player per day, and so you can be recognised inside your own groups. It is not your Apple ID, your advertising ID, or anything issued by your phone. Deleting the app destroys it.</td></tr>
+      <tr><td><b>The handle you type</b></td><td>It is what other players see on a board. Choose anything; it does not have to be your name.</td></tr>
+      <tr><td><b>Your daily score and its seven letter grades</b></td><td>The thing being ranked.</td></tr>
+      <tr><td><b>Whether you chose to appear on the global board</b></td><td>If you keep a score private it is not shown to anyone outside your groups.</td></tr>
+      <tr><td><b>Group codes and group names</b>, if you create or join one</td><td>To show your group its own board.</td></tr>
+    </table>
+
+    <h2>What Micron does not collect</h2>
+    <p>No name, no email address, no phone number, no location, no contacts, no
+    photos, no microphone, no camera, no address book, no account of any kind.
+    There is no sign-up. Micron contains no analytics SDK and no crash-reporting
+    SDK.</p>
+
+    <h2>Advertising</h2>
+    <p>Micron is free and shows ads through <b>Google AdMob</b>. AdMob is the only
+    third-party SDK in the app. It may collect and use data as described in
+    <a href="https://business.safety.google/privacy/">Google's privacy policy</a>
+    and by
+    <a href="https://business.safety.google/adscontrollerterms/">Google's advertising partners</a>.</p>
+    <p>Where the law requires it — the EEA, the UK and Switzerland — you are asked
+    for consent before any personalised advertising, through Google's own consent
+    form. You can reopen that form at any time from <b>“What am I looking at?” →
+    Ad privacy options</b> inside the app. On iOS you are also asked separately by
+    the system whether Micron may track you across other companies' apps and
+    websites; if you decline, the ads you see are non-personalised.</p>
+
+    <h2>Who can see your score</h2>
+    <ul>
+      <li><b>Global board</b> — only if you choose to show it. If you do, your handle, score and letter grades are visible to anyone playing Micron. You can change your mind at any time from the board itself.</li>
+      <li><b>Friend groups</b> — everyone in a group sees the handle, score and letter grades of everyone else in it, whether or not those scores are shown globally. Anyone with the six-character code can join a group, so share it only with people you want in it. Leaving a group removes you from its board.</li>
+    </ul>
+
+    <h2>How long it is kept</h2>
+    <p>Scores are kept so that all-time boards keep working. Group membership is
+    kept until you leave; a group with no members left is deleted automatically.
+    You can have everything tied to your install identifier erased by writing to
+    the address below — include the handle you used so we can find it.</p>
+
+    <h2>Children</h2>
+    <p>Micron is not directed at children under 13 and does not knowingly collect
+    anything from them.</p>
+
+    <h2>Where the data is</h2>
+    <p>The leaderboard runs on Cloudflare Workers and Cloudflare D1, which store
+    and process the data described above on Cloudflare's infrastructure.</p>
+
+    <h2>Changes</h2>
+    <p>If this policy changes, the date at the top changes with it.</p>
+
+    <h2>Deleting your data</h2>
+    <p>Open Micron, go to <b>About</b>, copy your player code, and paste it at
+    <a href="/delete">micron-board.erekstudio.workers.dev/delete</a>. Every score,
+    the handle attached to it and every group membership under that code are
+    erased on the spot, and a group left with no members goes with them. If you
+    have already uninstalled and no longer have the code, write to us instead and
+    say which handle was yours.</p>
+
+    <h2>Contact</h2>
+    <p>Micron is made by <b>Mustafa Salim Erek</b> (Erek Studio), a sole trader in
+    Türkiye. Questions, or a request to erase your data:
+    <a href="mailto:mustafasalimerek@gmail.com">mustafasalimerek@gmail.com</a></p>
+  </section>
+
+  <section id="tr" hidden>
+    <h1>Gizlilik Politikası</h1>
+    <div class="updated">Son güncelleme 5 Ağustos 2026</div>
+
+    <p>Micron günlük bir bulmaca oyunudur. Bu metin, uygulamanın tam olarak neyi
+    gönderdiğini, nereye gittiğini ve nedenini anlatır. Niyete göre değil, kaynak
+    koda göre yazılmıştır — burada yazan her şey
+    <code>lib/net/board_client.dart</code> dosyasında görülebilir.</p>
+
+    <h2>Micron neyi gönderir</h2>
+    <p>Micron yalnızca bir tur bitirdiğinizde veya bir arkadaş grubu
+    kullandığınızda, işlettiğimiz tek sunucuya
+    (<code>micron-board.erekstudio.workers.dev</code>) veri gönderir.</p>
+    <table>
+      <tr><th>Veri</th><th>Neden</th></tr>
+      <tr><td><b>Rastgele bir kurulum kimliği</b> — ilk turu bitirdiğinizde cihazınızda üretilen 18 karakterlik onaltılık dizi</td><td>Sıralamanın kişi başına günde tek kayıt tutabilmesi ve kendi gruplarınızda tanınabilmeniz için. Apple kimliğiniz, reklam kimliğiniz veya telefonunuzun verdiği herhangi bir numara değildir. Uygulamayı silmek onu yok eder.</td></tr>
+      <tr><td><b>Yazdığınız takma ad</b></td><td>Tahtada diğer oyuncuların gördüğü şey. Ne isterseniz seçin; gerçek adınız olmak zorunda değil.</td></tr>
+      <tr><td><b>Günlük puanınız ve yedi harf notu</b></td><td>Sıralanan şeyin ta kendisi.</td></tr>
+      <tr><td><b>Küresel tahtada görünmeyi seçip seçmediğiniz</b></td><td>Puanı gizli tutarsanız, gruplarınızın dışında kimseye gösterilmez.</td></tr>
+      <tr><td><b>Grup kodları ve grup adları</b> (oluşturur veya katılırsanız)</td><td>Grubunuza kendi tahtasını gösterebilmek için.</td></tr>
+    </table>
+
+    <h2>Micron neyi toplamaz</h2>
+    <p>Ad yok, e-posta yok, telefon numarası yok, konum yok, rehber yok, fotoğraf
+    yok, mikrofon yok, kamera yok, hiçbir türde hesap yok. Kayıt olma yok. Micron
+    içinde analitik SDK'sı ve çökme raporlama SDK'sı bulunmaz.</p>
+
+    <h2>Reklamlar</h2>
+    <p>Micron ücretsizdir ve <b>Google AdMob</b> üzerinden reklam gösterir. AdMob,
+    uygulamadaki tek üçüncü taraf SDK'sıdır.
+    <a href="https://business.safety.google/privacy/">Google'ın gizlilik politikası</a>
+    ve
+    <a href="https://business.safety.google/adscontrollerterms/">Google'ın reklam ortakları</a>
+    kapsamında veri toplayıp kullanabilir.</p>
+    <p>Yasanın gerektirdiği yerlerde — AEA, Birleşik Krallık ve İsviçre — kişiye
+    özel reklam öncesinde Google'ın kendi onay formuyla izniniz istenir. Bu formu
+    uygulama içinde <b>“Neye bakıyorum?” → Reklam gizlilik seçenekleri</b>
+    üzerinden istediğiniz zaman yeniden açabilirsiniz. iOS'ta ayrıca sistem,
+    Micron'un sizi başka şirketlerin uygulama ve sitelerinde izleyip
+    izleyemeyeceğini sorar; reddederseniz gördüğünüz reklamlar kişiye özel olmaz.</p>
+
+    <h2>Puanınızı kim görebilir</h2>
+    <ul>
+      <li><b>Küresel tahta</b> — yalnızca göstermeyi seçerseniz. Gösterirseniz takma adınız, puanınız ve harf notlarınız Micron oynayan herkese görünür. Kararınızı istediğiniz zaman tahtanın üzerinden değiştirebilirsiniz.</li>
+      <li><b>Arkadaş grupları</b> — bir gruptaki herkes, diğerlerinin takma adını, puanını ve harf notlarını görür; bu puanlar küresel olarak gösterilmese bile. Altı karakterlik kodu olan herkes gruba katılabilir, o yüzden kodu yalnızca içeride olmasını istediğiniz kişilerle paylaşın. Gruptan ayrılmak sizi o tahtadan çıkarır.</li>
+    </ul>
+
+    <h2>Ne kadar saklanır</h2>
+    <p>Tüm zamanlar tahtası çalışmaya devam etsin diye puanlar saklanır. Grup
+    üyeliği siz ayrılana kadar tutulur; üyesi kalmayan grup kendiliğinden silinir.
+    Kurulum kimliğinize bağlı her şeyi kendiniz silebilirsiniz: Micron'u açın,
+    <b>Hakkında</b> bölümünden oyuncu kodunuzu kopyalayın ve
+    <a href="/delete">micron-board.erekstudio.workers.dev/delete</a> adresine
+    yapıştırın. O koda bağlı bütün skorlar, takma ad ve grup üyelikleri anında
+    silinir; üyesi kalmayan grup da silinir. Uygulamayı sildiyseniz ve kod
+    elinizde yoksa aşağıdaki adrese yazın — bulabilmemiz için kullandığınız takma
+    adı da belirtin.</p>
+
+    <h2>Çocuklar</h2>
+    <p>Micron 13 yaş altı çocuklara yönelik değildir ve onlardan bilerek hiçbir
+    veri toplamaz.</p>
+
+    <h2>Veri nerede</h2>
+    <p>Sıralama Cloudflare Workers ve Cloudflare D1 üzerinde çalışır; yukarıda
+    anlatılan veriler Cloudflare altyapısında saklanır ve işlenir.</p>
+
+    <h2>Değişiklikler</h2>
+    <p>Bu politika değişirse, en üstteki tarih de değişir.</p>
+
+    <h2>İletişim</h2>
+    <p>Micron'u <b>Mustafa Salim Erek</b> (Erek Studio) yapar; Türkiye'de şahıs
+    işletmesidir. Sorular veya verilerinizin silinmesi talebi:
+    <a href="mailto:mustafasalimerek@gmail.com">mustafasalimerek@gmail.com</a></p>
+  </section>
+
+  <footer>
+    Micron — <a href="/">play</a> ·
+    <a href="mailto:mustafasalimerek@gmail.com">mustafasalimerek@gmail.com</a>
+  </footer>
+</div>
+
+<script>
+(function () {
+  var sections = { en: document.getElementById('en'), tr: document.getElementById('tr') };
+  var links = { en: document.getElementById('l-en'), tr: document.getElementById('l-tr') };
+  function show(lang) {
+    if (!sections[lang]) lang = 'en';
+    for (var k in sections) {
+      sections[k].hidden = k !== lang;
+      links[k].className = k === lang ? 'on' : '';
+    }
+    document.documentElement.lang = lang;
+    try { history.replaceState(null, '', '?lang=' + lang); } catch (e) {}
+  }
+  for (var k in links) {
+    (function (lang) {
+      links[lang].addEventListener('click', function (e) { e.preventDefault(); show(lang); });
+    })(k);
+  }
+  var q = (location.search.match(/lang=([a-z]{2})/) || [])[1];
+  // A Turkish phone opening the store listing's privacy link should land on
+  // Turkish without hunting for a switch.
+  show(q || (navigator.language || 'en').slice(0, 2).toLowerCase());
+})();
+</script>
