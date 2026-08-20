@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Micron — Delete Your Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans+Condensed:wght@700&display=swap" rel="stylesheet">
+<style>
+:root{--board:#0E1A2B;--deep:#0A1420;--rule:#1D3149;--chalk:#E6EDF5;--slate:#5C7793;--amber:#FFA23A;--rust:#E2564B;--mint:#4ADE9B}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--deep);color:var(--chalk);font-family:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  line-height:1.85;font-size:14px;-webkit-text-size-adjust:100%}
+.wrap{max-width:680px;margin:0 auto;padding:max(24px,env(safe-area-inset-top)) 20px 60px}
+header{display:flex;align-items:baseline;justify-content:space-between;
+  padding-bottom:14px;border-bottom:1px solid var(--rule);margin-bottom:26px}
+.mark{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;font-size:19px;
+  letter-spacing:.20em;text-transform:uppercase}
+.mark span{color:var(--amber)}
+.langs{font-size:11px;letter-spacing:.14em}
+.langs a{color:var(--slate);text-decoration:none;margin-left:10px;cursor:pointer}
+.langs a.on{color:var(--amber)}
+h1{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:22px;letter-spacing:.10em;
+  text-transform:uppercase;margin:0 0 6px}
+.updated{color:var(--slate);font-size:11px;letter-spacing:.10em;margin-bottom:30px}
+h2{font-family:"IBM Plex Sans Condensed",sans-serif;font-size:14px;letter-spacing:.16em;
+  text-transform:uppercase;color:var(--amber);margin:32px 0 10px}
+p{margin:0 0 14px;color:#C9D6E5}
+ul{margin:0 0 14px 18px;color:#C9D6E5}
+li{margin-bottom:7px}
+b{color:var(--chalk);font-weight:500}
+a{color:var(--amber)}
+.box{border:1px solid var(--rule);background:var(--board);padding:18px;margin:22px 0}
+input{width:100%;background:var(--deep);border:1px solid var(--rule);color:var(--chalk);
+  font-family:inherit;font-size:14px;letter-spacing:.10em;padding:11px 12px;margin-bottom:12px}
+input:focus{outline:none;border-color:var(--amber)}
+button{font-family:"IBM Plex Sans Condensed",sans-serif;font-weight:700;letter-spacing:.16em;
+  text-transform:uppercase;font-size:13px;background:var(--rust);color:var(--deep);
+  border:0;padding:12px 20px;cursor:pointer}
+button:disabled{background:var(--rule);color:var(--slate);cursor:default}
+.out{margin-top:12px;font-size:12px;letter-spacing:.06em;min-height:18px}
+.out.ok{color:var(--mint)} .out.err{color:var(--rust)}
+footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
+  color:var(--slate);font-size:11px;letter-spacing:.08em}
+section[lang]{display:none} section[lang].on{display:block}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="mark">MICR<span>O</span>N</div>
+    <div class="langs"><a id="l-en" class="on">EN</a><a id="l-tr">TR</a></div>
+  </header>
+
+  <section lang="en" class="on">
+    <h1>Delete your data</h1>
+    <div class="updated">LAST UPDATED 5 AUGUST 2026</div>
+
+    <p>Micron has no accounts. Everything the server holds about you is tied to a
+      <b>player code</b> — a random string your phone made the first time you opened the
+      app. Nobody, including us, can connect that code to a person.</p>
+
+    <h2>What deleting removes</h2>
+    <ul>
+      <li>Every score you have submitted, on every day, in both pools.</li>
+      <li>The handle you chose, wherever it appears on a board.</li>
+      <li>Your membership of any friend group. A group left with no members is deleted too.</li>
+    </ul>
+    <p>It happens immediately and cannot be undone. Your scores do not come back if
+      you change your mind.</p>
+
+    <h2>Delete it yourself</h2>
+    <p>Open Micron, go to <b>About</b>, and copy your player code. Paste it here.</p>
+
+    <div class="box">
+      <input id="uid-en" placeholder="player code" autocomplete="off" spellcheck="false">
+      <button id="go-en">Delete everything</button>
+      <div class="out" id="out-en"></div>
+    </div>
+
+    <h2>Or ask us</h2>
+    <p>If you have uninstalled the app and no longer have your code, email
+      <a href="mailto:mustafasalimerek@gmail.com">mustafasalimerek@gmail.com</a> from any
+      address and say which handle and roughly which days were yours. We will find the
+      rows and delete them. Expect a reply within seven days.</p>
+    <p>Uninstalling on its own does not delete anything from the server — it only
+      abandons the code, and the old scores stay on the board under the handle.</p>
+
+    <h2>What is not stored at all</h2>
+    <p>No email, no name, no phone number, no location, no contacts, no payment
+      details. There is nothing else to delete. See the
+      <a href="/privacy">privacy policy</a> for what the ad SDK collects on its own account.</p>
+  </section>
+
+  <section lang="tr">
+    <h1>Verilerini sil</h1>
+    <div class="updated">SON GÜNCELLEME 5 AĞUSTOS 2026</div>
+
+    <p>Micron'da hesap yok. Sunucunun sana dair tuttuğu her şey bir
+      <b>oyuncu koduna</b> bağlı — uygulamayı ilk açtığında telefonunun ürettiği rastgele
+      bir dizi. Bu kodu bir kişiye bağlamak bizim için de mümkün değil.</p>
+
+    <h2>Silme neyi kaldırır</h2>
+    <ul>
+      <li>Gönderdiğin bütün skorlar, her gün, her iki havuzda.</li>
+      <li>Seçtiğin isim, tablolarda göründüğü her yerde.</li>
+      <li>Arkadaş gruplarındaki üyeliğin. Üyesi kalmayan grup da silinir.</li>
+    </ul>
+    <p>İşlem anında gerçekleşir ve geri alınamaz. Fikrini değiştirirsen skorların geri gelmez.</p>
+
+    <h2>Kendin sil</h2>
+    <p>Micron'u aç, <b>Hakkında</b> bölümüne git, oyuncu kodunu kopyala. Buraya yapıştır.</p>
+
+    <div class="box">
+      <input id="uid-tr" placeholder="oyuncu kodu" autocomplete="off" spellcheck="false">
+      <button id="go-tr">Her şeyi sil</button>
+      <div class="out" id="out-tr"></div>
+    </div>
+
+    <h2>Ya da bize yaz</h2>
+    <p>Uygulamayı sildiysen ve kodun elinde yoksa, herhangi bir adresten
+      <a href="mailto:mustafasalimerek@gmail.com">mustafasalimerek@gmail.com</a> adresine
+      yaz; hangi ismi kullandığını ve yaklaşık hangi günlerde oynadığını söyle. Satırları
+      bulup sileriz. Yanıt en geç yedi gün içinde.</p>
+    <p>Uygulamayı kaldırmak tek başına sunucudan bir şey silmez — sadece kodu terk eder,
+      eski skorlar o isimle tabloda kalır.</p>
+
+    <h2>Hiç tutulmayanlar</h2>
+    <p>E-posta yok, ad yok, telefon yok, konum yok, rehber yok, ödeme bilgisi yok.
+      Silinecek başka bir şey yok. Reklam SDK'sının kendi hesabına ne topladığı için
+      <a href="/privacy">gizlilik politikasına</a> bak.</p>
+  </section>
+
+  <footer>Erek Studio · Mustafa Salim Erek · mustafasalimerek@gmail.com</footer>
+</div>
+
+<script>
+(function () {
+  // Language follows the browser, with a manual switch.
+  //
+  // Both the CSS and this query are scoped to `section[lang]` on purpose: the
+  // line below stamps `lang` on <html> too, and a bare `[lang]` selector then
+  // matches the root element and hides the entire page. That shipped once.
+  var pick = (navigator.language || "en").toLowerCase().startsWith("tr") ? "tr" : "en";
+  function show(l) {
+    document.querySelectorAll("section[lang]").forEach(function (s) {
+      s.classList.toggle("on", s.getAttribute("lang") === l);
+    });
+    document.getElementById("l-en").classList.toggle("on", l === "en");
+    document.getElementById("l-tr").classList.toggle("on", l === "tr");
+    document.documentElement.lang = l;
+  }
+  show(pick);
+  document.getElementById("l-en").onclick = function () { show("en"); };
+  document.getElementById("l-tr").onclick = function () { show("tr"); };
+
+  ["en", "tr"].forEach(function (l) {
+    var btn = document.getElementById("go-" + l);
+    var inp = document.getElementById("uid-" + l);
+    var out = document.getElementById("out-" + l);
+    btn.onclick = async function () {
+      var code = (inp.value || "").trim().toLowerCase();
+      var t = l === "tr"
+        ? { ask: "Bu geri alınamaz. Silinsin mi?", bad: "Kod geçersiz.",
+            none: "Bu koda ait kayıt yok — silinecek bir şey kalmamış.",
+            ok: function (s, g) { return s + " skor ve " + g + " grup üyeliği silindi."; },
+            fail: "Silinemedi. Biraz sonra tekrar dene." }
+        : { ask: "This cannot be undone. Delete?", bad: "That code is not valid.",
+            none: "Nothing is stored under that code — there is nothing to delete.",
+            ok: function (s, g) { return "Deleted " + s + " scores and " + g + " group memberships."; },
+            fail: "Could not delete. Try again shortly." };
+      out.className = "out";
+      if (!/^[0-9a-f]{8,64}$/.test(code)) { out.className = "out err"; out.textContent = t.bad; return; }
+      if (!confirm(t.ask)) return;
+      btn.disabled = true;
+      try {
+        var r = await fetch("https://micron-board.erekstudio.workers.dev/delete", {
+          method: "POST", headers: { "content-type": "application/json" },
+          body: JSON.stringify({ uid: code }),
+        });
+        var d = await r.json();
+        if (!r.ok) throw new Error(d.error || "failed");
+        out.className = "out ok";
+        out.textContent = (d.scores || d.groups) ? t.ok(d.scores, d.groups) : t.none;
+        inp.value = "";
+      } catch (e) {
+        out.className = "out err";
+        out.textContent = t.fail;
+      }
+      btn.disabled = false;
+    };
+  });
+})();
+</script>
