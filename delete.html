@@ -172,7 +172,7 @@ section[lang]{display:none} section[lang].on{display:block}
       if (!confirm(t.ask)) return;
       btn.disabled = true;
       try {
-        var r = await fetch("https://micron-board.erekstudio.workers.dev/delete", {
+        var r = await fetch("https://micron.launchtrust.co/delete", {
           method: "POST", headers: { "content-type": "application/json" },
           body: JSON.stringify({ uid: code }),
         });
