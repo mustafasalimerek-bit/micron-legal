@@ -58,12 +58,13 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
     <h2>What Micron sends</h2>
     <p>Micron sends data to one server we operate
     (<code>micron.launchtrust.co</code>, also reachable as
-    <code>micron-board.erekstudio.workers.dev</code> — one server, two names), and only
-    when you finish a
-    round or use a friend group.</p>
+    <code>micron-board.erekstudio.workers.dev</code> — one server, two names). Scores
+    and groups are sent when you finish a round or use a friend group; the
+    measurement described further down is sent when the app opens, so that
+    "did anyone come back" can be answered at all.</p>
     <table>
       <tr><th>Data</th><th>Why</th></tr>
-      <tr><td><b>A random install identifier</b> — 18 hex characters generated on your device the first time you finish a round</td><td>So the leaderboard can keep one entry per player per day, and so you can be recognised inside your own groups. It is not your Apple ID, your advertising ID, or anything issued by your phone. Deleting the app destroys it.</td></tr>
+      <tr><td><b>A random install identifier</b> — 18 hex characters generated on your device the first time the app opens</td><td>So the leaderboard can keep one entry per player per day, and so you can be recognised inside your own groups. It is not your Apple ID, your advertising ID, or anything issued by your phone. Deleting the app destroys it.</td></tr>
       <tr><td><b>The handle you type</b></td><td>It is what other players see on a board. Choose anything; it does not have to be your name.</td></tr>
       <tr><td><b>Your daily score and its seven letter grades</b></td><td>The thing being ranked.</td></tr>
       <tr><td><b>Whether you chose to appear on the global board</b></td><td>If you keep a score private it is not shown to anyone outside your groups.</td></tr>
@@ -151,13 +152,15 @@ footer{margin-top:44px;padding-top:16px;border-top:1px solid var(--rule);
     <code>lib/net/board_client.dart</code> ve <code>lib/analytics/</code> içinde görülebilir.</p>
 
     <h2>Micron neyi gönderir</h2>
-    <p>Micron yalnızca bir tur bitirdiğinizde veya bir arkadaş grubu
-    kullandığınızda, işlettiğimiz tek sunucuya
+    <p>Micron, işlettiğimiz tek sunucuya
     (<code>micron.launchtrust.co</code>; aynı sunucu
-    <code>micron-board.erekstudio.workers.dev</code> adıyla da erişilebilir) veri gönderir.</p>
+    <code>micron-board.erekstudio.workers.dev</code> adıyla da erişilebilir) veri
+    gönderir. Puanlar ve gruplar bir turu bitirdiğinizde veya bir arkadaş grubu
+    kullandığınızda gider; aşağıda anlatılan ölçüm ise uygulama her açıldığında
+    gider — "geri dönen oldu mu" sorusu ancak böyle cevaplanabiliyor.</p>
     <table>
       <tr><th>Veri</th><th>Neden</th></tr>
-      <tr><td><b>Rastgele bir kurulum kimliği</b> — ilk turu bitirdiğinizde cihazınızda üretilen 18 karakterlik onaltılık dizi</td><td>Sıralamanın kişi başına günde tek kayıt tutabilmesi ve kendi gruplarınızda tanınabilmeniz için. Apple kimliğiniz, reklam kimliğiniz veya telefonunuzun verdiği herhangi bir numara değildir. Uygulamayı silmek onu yok eder.</td></tr>
+      <tr><td><b>Rastgele bir kurulum kimliği</b> — uygulama ilk açıldığında cihazınızda üretilen 18 karakterlik onaltılık dizi</td><td>Sıralamanın kişi başına günde tek kayıt tutabilmesi ve kendi gruplarınızda tanınabilmeniz için. Apple kimliğiniz, reklam kimliğiniz veya telefonunuzun verdiği herhangi bir numara değildir. Uygulamayı silmek onu yok eder.</td></tr>
       <tr><td><b>Yazdığınız takma ad</b></td><td>Tahtada diğer oyuncuların gördüğü şey. Ne isterseniz seçin; gerçek adınız olmak zorunda değil.</td></tr>
       <tr><td><b>Günlük puanınız ve yedi harf notu</b></td><td>Sıralanan şeyin ta kendisi.</td></tr>
       <tr><td><b>Küresel tahtada görünmeyi seçip seçmediğiniz</b></td><td>Puanı gizli tutarsanız, gruplarınızın dışında kimseye gösterilmez.</td></tr>
